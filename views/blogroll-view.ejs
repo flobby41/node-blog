@@ -1,0 +1,27 @@
+<!-- This view displays all the blog posts -->
+
+<!-- Include Head -->
+<% include header.ejs %>
+
+<!-- Entry Title and Edit Buttons -->
+<% for(var i=0; i<entries.length; i++) {%>
+<div class="post center-block">
+		<div class="title-row t-wrapper">
+			<!-- Post Title -->
+			<h1 class="post-title"><%= entries[i].title %></h1>
+		</div>		
+	<!-- Entry Content -->
+		<div class="post-content">
+			<%- entries[i].content %>
+		</div>
+</div>
+<!-- White Divider after all but last post -->
+<% if (i <entries.length-1){%>
+	<div class="post-divider"></div>
+<% } %>
+<% } %>
+
+<!-- Include Footer -->
+<% include footer.ejs %>
+
+

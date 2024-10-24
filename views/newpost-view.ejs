@@ -1,0 +1,27 @@
+<!-- This view allows user to create and post a new blog entry. -->
+
+<!-- Include Head -->
+<% include header.ejs %>
+<div class="center-block width">
+	<form id="entryform" name="entryform" method="post" action="/insertpost">
+	<div id="newpost-top">
+		<div class="">
+	  		<input id="entrytitleinput" type="text" name="title" placeholder="title">	
+		</div>
+		
+		<ul id="newpost-controls">
+			<li id="publish-post" class="cursor-pointer">publish</li>
+		</ul>
+	</div>
+
+	<textarea id="newpostContent" type="text" name="newpostContent" class="form-control" rows="10" placeholder="enter post here"></textarea>
+	<script>
+		// ckeditor replaces a textarea with it's own rich text editor
+	    CKEDITOR.replace('newpostContent');
+    </script>
+	
+	</form>
+</div>
+
+<!-- Include Footer -->
+<% include footer.ejs %>
