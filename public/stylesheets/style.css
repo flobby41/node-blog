@@ -1,0 +1,422 @@
+
+* {
+	background-color: rgb(242, 243, 241);
+	font-family: fira_sansregular;
+}
+/* HTML TAGS **********************************************************
+***********************************************************************/
+body {
+	padding: 10px;
+}
+button, input{	
+	outline: none;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+a{
+	text-decoration: none !important;
+}
+
+/* Styles for page border *********************************************
+***********************************************************************/
+#top, #bottom, #left, #right {
+	background: white;
+	position: fixed;
+	}
+#left, #right {
+	top: 0; bottom: 0;
+	width: 10px;
+}
+#left { left: 0; }
+#right { right: 0; }		
+#top, #bottom {
+	left: 0; right: 0;
+	height: 10px;
+}
+#top { top: 0; }
+#bottom { bottom: 0; }
+/* End of border code */
+
+/* UTILITY CLASSES ****************************************************
+***********************************************************************/
+/*Vertical Centering using table method*/
+.t-wrapper {display:table;}
+.t-cell {display:table-cell; vertical-align:middle;}
+
+/*Horizontal Block Centering*/
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	float: none !important;
+}
+.width{	
+	width: 90%; 
+	max-width: 900px;
+}
+/* Gray Link: Purple on Hover*/
+.link{
+	text-decoration: none;
+	color:#939292;
+}
+.link:hover{
+	color: #782D8E;
+	text-decoration: none;
+}
+
+/*Error Message*/
+.error{
+	position: absolute;
+	left: 0;
+    right: 0;
+    top: 10px;
+  	margin: 0 auto;
+	width:300px;
+	height: 50px;
+	line-height: 50px;
+	background: white;
+	color:red;
+	font-family: fira_sansregular;
+	text-align: center;
+}
+/* Buttons */
+
+.btn-prpl{
+	border: 1px solid #762A90;
+	color: #762A90;
+}
+.btn-prpl:hover{
+	border: 5px solid #762A90;
+}
+
+/* HEADER ****************************************************
+**************************************************************/
+#header{
+	width: 100%; 
+	max-width: 1130px;
+	height: 30px;
+	margin-top:40px;
+}
+#logo{
+	float: left;
+	margin-left: 15px;
+}
+#logo img{ 
+	/*width:40%;*/
+	width: 200px;
+}
+
+/* HOME ******************************************************
+**************************************************************/
+/* COPY */
+#copy{
+	text-align: center;
+	clear: both;
+	margin-top: 100px;
+	max-width: 600px;
+}
+#copy h1{
+	font-family: fira_sansbold;
+	font-size: 50px;
+}
+#copy p{	
+	margin-top: 42px;
+	line-height: 35px;
+	font-family: fira_sanslight;
+	font-size: 25px;
+}
+#home-hr{
+	width: 85%;
+	max-width: 882px;
+	/*top, right, bottom, left*/
+	margin: 55px auto 45px auto;
+}
+/* LOGIN */
+#login-form{
+	float:right;
+	margin-top: 5px;
+	margin-right: 15px;
+	display: inline;
+}
+#login-form input{
+	width: 112px;
+	height: 25px;
+	border: 1px solid #939292;
+	outline: none;
+}
+#login-form button{
+	width: 56px;
+	height: 25px;
+}
+/* SIGNUP */
+#signup-text{
+	font-family: fira_sansregular;
+	font-size: 38px;
+	text-align: center;
+/*	margin-top: 45px;
+*/}
+#signup-form{
+	margin-top: 25px;
+	width:400px;
+	font-family: fira_sanslight;
+	padding-bottom: 100px;
+}
+#signup-form .form-group {
+	height: 45px;
+
+}
+#signup-form input{
+	border: 1px solid #939292;
+	height: 30px;
+	width:300px;
+	float: right;
+
+}
+#signup-form button{
+	width: 75px;
+	height: 35px;
+	float: right
+}
+
+/* Username field for both login and signup */
+.username-field {
+	text-transform: lowercase;
+}
+
+/* Page Title **************************************************
+****************************************************************/
+.page-title {
+	font-family: fira_sansregular;
+	text-align: center;
+	padding-bottom: 40px;
+	font-size: 100px;
+	width: 90%; 
+	max-width: 900px;
+	margin-top: 50px;
+	border-bottom: solid black 5px;
+}
+
+/* Blogroll ****************************************************
+****************************************************************/
+
+/* New Post Button */
+#new-post-button{
+	margin-top: 50px;
+	width: 100px;
+	height: 50px;
+  	line-height: 50px;
+  	text-align: center;
+	font-family: fira_sanslight;
+	border: 2px solid #939292;
+}
+#new-post-button a{
+	display:block; 
+	height:100%;
+	color: #939292;
+}
+#new-post-button:hover{
+	border: 2px solid #652C90;
+}
+#new-post-button a:hover{
+	color: #652C90;
+}
+
+/* Each Post */
+.post {
+	width: 90%; 
+	max-width: 900px;
+	padding:50px 0 25px;
+}
+.title-row{
+	height: 40px;
+}
+#editbuttons button{
+	border: none;
+	font: 18px fira_sanslight;
+}
+.edit{color: #2E7984; display: none;}
+.delete{color: #C06350;}
+.post-title {
+	float: left;
+	font-size: 40px;
+	font-family: fira_sanslight;
+	padding-right:20px;
+}
+/* This is the actual entry */
+.post-content {
+	font-family: fira_sansregular;
+	font-size: 18px;
+	line-height: 24px;
+	clear: both;
+	margin-top:50px;
+}
+/* Sets the list items back to their defaults when displaying posts */
+.post-content ul { 
+   list-style-type: disc; 
+   list-style-position: inside; 
+}
+.post-content ol { 
+   list-style-type: decimal; 
+   list-style-position: inside; 
+}
+.post-content ul ul, ol ul { 
+   list-style-type: circle; 
+   list-style-position: inside; 
+   margin-left: 15px; 
+}
+.post-content ol ol, ul ol { 
+   list-style-type: lower-latin; 
+   list-style-position: inside; 
+   margin-left: 15px; 
+}
+/* White line between divides posts*/
+.post-divider{
+	border-bottom: solid white 10px;
+	width: 90%;
+}
+
+#logoutButton{
+	position: absolute;
+	top:50px;
+	right:50px;
+	font-family: fira_sansregular;
+}
+
+/* New Post Page *********************************************
+**************************************************************/
+#newpost-top,
+#newpost-top a,
+#entrytitleinput {
+	font-family: fira_sanslight;
+	color: #62548C;
+}
+
+/* text area */
+#newpost-content {
+	font-family: fira_sansregular;
+	padding: 20px;
+	position: relative;
+	top: 50px;
+	clear: both;
+	display: block;
+	width: calc(100% - 4px);
+	height: 300px;
+	resize: none;
+	outline: none;
+	border: solid 2px;
+	font-size: 18px;
+	box-sizing: border-box;
+}
+
+/* CKEditor */
+#cke_newpostContent {
+    padding: 60px 0px;
+    /*padding-bottom: 60px;*/
+    border: none;
+    box-shadow: none;
+}
+
+#entryform {margin-top: 20px;}
+
+#entrytitleinput {
+	font-size: 30px;
+	float: left;
+	outline: none;
+	width: 200px;
+	border: none;
+	border-bottom: solid 2px;
+}
+/*save, publish, delete*/
+
+#newpost-controls {
+	float: right;
+	font-size: 24px;
+	margin: 10px 30px 0px 0px;
+}
+#newpost-controls li {
+	list-style: none;
+	float: left;
+	padding-left: 18px;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+	cursor: hand;
+}
+
+
+@media all and (max-width: 600px) {
+	.page-title{font-size: 50px}
+	#header{
+		margin-top: 15px;
+		height: auto;
+	}
+	/* Center Logo */
+	#logo{float: none;}
+	#logo img{
+		margin: auto; 
+		display:block;
+	}
+
+	/* Login Form */
+	#login-form{
+		float: none;
+		display: block;
+		margin: auto;
+	}
+	#login-form input, #login-form button{
+		margin-top: 10px;
+		width: 100%;
+		height: 35px;		
+	}
+	/* Signup Form */
+	#login-form, #signup-form{
+		width: 90%;
+		max-width: 400px;
+	}
+	#signup-form .form-group{
+		height: auto;
+	}
+	#signup-form label{
+		display: block;
+		font-size: 16px;
+	}
+	#signup-form input{
+		float: none;
+	    margin-top: 5px;
+	    margin-bottom: 15px;	
+	    width: 100%;	
+	}
+
+	/* Copy */
+	#copy{margin-top: 25px;}
+	#copy h1{font-size: 28px;}
+	#copy p{
+		font-size: 18px;
+		line-height: 28px;
+	    max-width: 400px;
+    	margin: 10px auto;
+	}
+	#signup-text{font-size: 22px;}
+	#home-hr{
+		margin: 15px auto 10px auto;
+	}
+
+	/*Blogroll*/
+	#logoutButton{
+		top: 25px;
+	    right: 25px;
+	}	
+
+	/*New Post*/
+	#entrytitleinput,
+	#newpost-controls {
+		float: none;
+		padding-top: 10px;
+	}
+	#newpost-controls li {
+		font-size: 20px;
+		padding: 0px 10px 0px 0px;
+	}
+	#newpost-content{top:25px;}
+}
